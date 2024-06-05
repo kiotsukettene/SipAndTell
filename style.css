@@ -12,12 +12,31 @@ p {
     
 }
 
-.navbar {
-    background-color: #AB875F;
-}
+
 
 .main {
     padding-bottom: 100px;
 }
+ 
+.btn-primary {
+    background-color: #74512D;
+    color: white;
+    width: 10rem;
+}
+
+.btn-buy {
+    background-color: #74512D;
+    color: white;
+    width: 5rem;
+    
+}
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.cartbox a {
+    border: 5px solid white;
+}
+
 
 

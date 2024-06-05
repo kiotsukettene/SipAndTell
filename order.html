@@ -12,35 +12,371 @@
     <script src="https://kit.fontawesome.com/4ca4363c26.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="pb-5">
-            <!--NAV BAR-->
-                <section id="nav">
-                <nav class="navbar sticky-top navbar-expand-lg">
-                    <div class="container">
-                      <a class="navbar-brand" href="#">Logo</a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto fs-5">
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#about">About Us</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Order</a>
-                          </li>
-                        </ul>
+      <header>
+        <!--NAV BAR-->
+            <section id="nav">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                  <a class="navbar-brand " href="#">Logo</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fs-5 px-3">
+                      <li class="nav-item">
+                        <a class="nav-link  px-4" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link  px-4" href="index.html#about">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active px-4" href="order.html">Order</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link px-4" href="cart.html">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                          </svg>
+                        </a>
+                      </li>
+
+    
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </section>
+        
+            
+        <!--END NAV BAR-->
+
+       <!--coffee section-->
+       <div class="container menu pb-5">
+        <div class="row justify-content-center align-items-center">
+          <h1 class="display-3 text-center fw-semibold pb-2">MENU</h1>
+          <div class="col-12 col-lg-10">
+            <h1 class="fw-semibold pb-3">Coffee</h1>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <img src="img/americano.jpeg" class="card-img-top w-100" alt="...">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Coffee Americano</h5>
+                      <h6 class="mb-0">₱29.00</h6>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Hot</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Cold</label>
+                      </div>
+                      <div class="input-group input-group-sm ms-auto" style="width: 100px;">
+                        <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                          <span class="glyphicon glyphicon-minus">-</span>
+                        </button>
+                        <input type="text" name="quant[1]" class="form-control input-number text-center" value="1" min="1" max="10">
+                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                          <span class="glyphicon glyphicon-plus">+</span>
+                        </button>
                       </div>
                     </div>
-                  </nav>
-                </section>
-            
-                
-            <!--END NAV BAR-->
-       
+                    <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                  </div>
+                </div>
+              </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="img/capuccino.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title">Coffee Capuccino</h5>
+                        <h6 class="mb-0">₱49.00</h6>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option1">
+                          <label class="form-check-label" for="inlineRadio3">Hot</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option2">
+                          <label class="form-check-label" for="inlineRadio4">Cold</label>
+                        </div>
+                        <div class="input-group input-group-sm ms-auto" style="width: 100px;">
+                          <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
+                            <span class="glyphicon glyphicon-minus">-</span>
+                          </button>
+                          <input type="text" name="quant[2]" class="form-control input-number text-center" value="1" min="1" max="10">
+                          <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
+                            <span class="glyphicon glyphicon-plus">+</span>
+                          </button>
+                        </div>
+                      </div>
+                      <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="img/latte.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title">Coffee Latte</h5>
+                        <h6 class="mb-0">₱39.00</h6>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
+                          <label class="form-check-label" for="inlineRadio5">Hot</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
+                          <label class="form-check-label" for="inlineRadio6">Cold</label>
+                        </div>
+                        <div class="input-group input-group-sm ms-auto" style="width: 100px;">
+                          <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                            <span class="glyphicon glyphicon-minus">-</span>
+                          </button>
+                          <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
+                          <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                            <span class="glyphicon glyphicon-plus">+</span>
+                          </button>
+                        </div>
+                      </div>
+                      <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+        <!--end coffee section-->
+
+        <!--non-coffee section-->
+        <section>
+          <div class="container menu pb-5">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-12 col-lg-10">
+                <h1 class="fw-semibold pb-3">Non-Coffee</h1>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card">
+                      <img src="img/milkyberry.jpg" class="card-img-top w-100" alt="...">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h5 class="card-title">Milky Berry</h5>
+                          <h6 class="mb-0">₱29.00</h6>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
+                          <label class="form-check-label" for="inlineRadio5">Hot</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
+                          <label class="form-check-label" for="inlineRadio6">Cold</label>
+                        </div>
+                        <div class="input-group input-group-sm ms-auto" style="width: 100px;">
+                          <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                            <span class="glyphicon glyphicon-minus">-</span>
+                          </button>
+                          <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
+                          <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                            <span class="glyphicon glyphicon-plus">+</span>
+                          </button>
+                        </div>
+                      </div>
+                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="img/matcha.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h5 class="card-title">Matcha Latte</h5>
+                          <h6 class="mb-0">₱49.00</h6>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
+                            <label class="form-check-label" for="inlineRadio5">Hot</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
+                            <label class="form-check-label" for="inlineRadio6">Cold</label>
+                          </div>
+                          <div class="input-group input-group-sm ms-auto" style="width: 100px;">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-minus">-</span>
+                            </button>
+                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-plus">+</span>
+                            </button>
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="img/chocolate.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h5 class="card-title">Classic Chocolate</h5>
+                          <h6 class="mb-0">₱39.00</h6>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
+                            <label class="form-check-label" for="inlineRadio5">Hot</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
+                            <label class="form-check-label" for="inlineRadio6">Cold</label>
+                          </div>
+                          <div class="input-group input-group-sm ms-auto" style="width: 100px;">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-minus">-</span>
+                            </button>
+                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-plus">+</span>
+                            </button>
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--end non-coffee-->
+
+
+        <!--Pastries-->
+        <section>
+          <div class="container menu pb-5">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-12 col-lg-10">
+                <h1 class="fw-semibold pb-3">Pastries</h1>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card">
+                      <img src="img/cookies.avif" class="card-img-top w-100" alt="...">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h5 class="card-title">Cookies</h5>
+                          <h6 class="mb-0">₱29.00</h6>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
+                            <label class="form-check-label" for="inlineRadio5">Hot</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
+                            <label class="form-check-label" for="inlineRadio6">Cold</label>
+                          </div>
+                          <div class="input-group input-group-sm ms-auto" style="width: 100px;">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-minus">-</span>
+                            </button>
+                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-plus">+</span>
+                            </button>
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="img/bananabread.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h5 class="card-title">Banana Cake</h5>
+                          <h6 class="mb-0">₱49.00</h6>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
+                            <label class="form-check-label" for="inlineRadio5">Hot</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
+                            <label class="form-check-label" for="inlineRadio6">Cold</label>
+                          </div>
+                          <div class="input-group input-group-sm ms-auto" style="width: 100px;">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-minus">-</span>
+                            </button>
+                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-plus">+</span>
+                            </button>
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="img/crossaint.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <h5 class="card-title">Crossaint</h5>
+                          <h6 class="mb-0">₱39.00</h6>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
+                            <label class="form-check-label" for="inlineRadio5">Hot</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
+                            <label class="form-check-label" for="inlineRadio6">Cold</label>
+                          </div>
+                          <div class="input-group input-group-sm ms-auto" style="width: 100px;">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-minus">-</span>
+                            </button>
+                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                              <span class="glyphicon glyphicon-plus">+</span>
+                            </button>
+                          </div>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+<!--end pastries-->
+
+      </header>
+
+      <script src="index.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 
 </html>
