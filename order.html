@@ -22,9 +22,12 @@
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto fs-5 px-3">
+                    <ul class="navbar-nav ms-auto fs-6 px-3 pt-3">
                       <li class="nav-item">
                         <a class="nav-link  px-4" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link  px-4" aria-current="page" href="index.html#gallery">Gallery</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link  px-4" href="index.html#about">About Us</a>
@@ -37,6 +40,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                           </svg>
+                          <span id="cartItemBadge" class="badge rounded-pill bg-danger">0</span>
                         </a>
                       </li>
 
@@ -53,25 +57,25 @@
        <!--coffee section-->
        <div class="container menu pb-5">
         <div class="row justify-content-center align-items-center">
-          <h1 class="display-3 text-center fw-semibold pb-2">MENU</h1>
+          <h1 class="display-4 text-center fw-semibold pb-2">Menu</h1>
           <div class="col-12 col-lg-10">
-            <h1 class="fw-semibold pb-3">Coffee</h1>
+            <h1 id="itemCategory1"class="fw-semibold pb-3">Coffee</h1>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
               <div class="col">
                 <div class="card">
-                  <img src="img/americano.jpeg" class="card-img-top w-100" alt="...">
+                  <img id="itemImage1" src="img/americano.jpeg" class="card-img-top img-fluid" alt="...">
                   <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                      <h5 class="card-title">Coffee Americano</h5>
-                      <h6 class="mb-0">₱29.00</h6>
+                      <h5 id="itemName1"class="card-title">Coffee Americano</h5>
+                      <h6 id="itemPrice1"class="mb-0">₱29.00</h6>
                     </div>
                     <div class="d-flex justify-content-between align-items-center mt-2">
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="Hot">
                         <label class="form-check-label" for="inlineRadio1">Hot</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="Cold">
                         <label class="form-check-label" for="inlineRadio2">Cold</label>
                       </div>
                       <div class="input-group input-group-sm ms-auto" style="width: 100px;">
@@ -84,25 +88,25 @@
                         </button>
                       </div>
                     </div>
-                    <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                    <a href="#" class="btn btn-primary mt-2 " onclick="addToCart(1)">Add To Cart</a>
                   </div>
                 </div>
               </div>
                 <div class="col">
                   <div class="card">
-                    <img src="img/capuccino.jpg" class="card-img-top" alt="...">
+                    <img id="itemImage2" src="img/capuccino.jpg" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="card-title">Coffee Capuccino</h5>
-                        <h6 class="mb-0">₱49.00</h6>
+                        <h5 id="itemName2" class="card-title">Coffee Capuccino</h5>
+                        <h6 id="itemPrice2"class="mb-0">₱49.00</h6>
                       </div>
                       <div class="d-flex justify-content-between align-items-center mt-2">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option1">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="Hot">
                           <label class="form-check-label" for="inlineRadio3">Hot</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option2">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="Cold">
                           <label class="form-check-label" for="inlineRadio4">Cold</label>
                         </div>
                         <div class="input-group input-group-sm ms-auto" style="width: 100px;">
@@ -115,25 +119,25 @@
                           </button>
                         </div>
                       </div>
-                      <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                      <a href="#" class="btn btn-primary mt-2" onclick="addToCart(2)">Add To Cart</a>
                     </div>
                   </div>
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="img/latte.jpg" class="card-img-top" alt="...">
+                    <img id="itemImage3" src="img/latte.jpg" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                       <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="card-title">Coffee Latte</h5>
-                        <h6 class="mb-0">₱39.00</h6>
+                        <h5 id="itemName3"class="card-title">Coffee Latte</h5>
+                        <h6 id="itemPrice3" class="mb-0">₱39.00</h6>
                       </div>
                       <div class="d-flex justify-content-between align-items-center mt-2">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="Hot" required>
                           <label class="form-check-label" for="inlineRadio5">Hot</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="Cold" required>
                           <label class="form-check-label" for="inlineRadio6">Cold</label>
                         </div>
                         <div class="input-group input-group-sm ms-auto" style="width: 100px;">
@@ -146,7 +150,7 @@
                           </button>
                         </div>
                       </div>
-                      <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                      <a href="#" class="btn btn-primary mt-2" onclick="addToCart(3)">Add To Cart</a>
                     </div>
                   </div>
                 </div>
@@ -163,98 +167,78 @@
           <div class="container menu pb-5">
             <div class="row justify-content-center align-items-center">
               <div class="col-12 col-lg-10">
-                <h1 class="fw-semibold pb-3">Non-Coffee</h1>
+                <h1 id="itemCategory2"class="fw-semibold pb-3">Non-Coffee</h1>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                   <div class="col">
                     <div class="card">
-                      <img src="img/milkyberry.jpg" class="card-img-top w-100" alt="...">
+                      <img id="itemImage4"src="img/milkyberry.jpg" class="card-img-top img-fluid" alt="...">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                          <h5 class="card-title">Milky Berry</h5>
-                          <h6 class="mb-0">₱29.00</h6>
+                          <h5 id="itemName4" class="card-title">Milky Berry</h5>
+                          <h6 id="itemPrice4" class="mb-0">₱29.00</h6>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-2">
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
-                          <label class="form-check-label" for="inlineRadio5">Hot</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
-                          <label class="form-check-label" for="inlineRadio6">Cold</label>
-                        </div>
+                          <a href="#" class="btn btn-primary mt-2 " onclick="addToCart(4)">Add To Cart</a>
                         <div class="input-group input-group-sm ms-auto" style="width: 100px;">
-                          <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                          <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[4]">
                             <span class="glyphicon glyphicon-minus">-</span>
                           </button>
-                          <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
-                          <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                          <input type="text" name="quant[4]" class="form-control input-number text-center" value="1" min="1" max="10">
+                          <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[4]">
                             <span class="glyphicon glyphicon-plus">+</span>
                           </button>
                         </div>
                       </div>
-                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                     
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="img/matcha.jpg" class="card-img-top" alt="...">
+                      <img id="itemImage5" src="img/matcha.avif" class="card-img-top img-fluid" alt="...">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                          <h5 class="card-title">Matcha Latte</h5>
-                          <h6 class="mb-0">₱49.00</h6>
+                          <h5 id="itemName5"class="card-title">Matcha Latte</h5>
+                          <h6 id="itemPrice5"class="mb-0">₱49.00</h6>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-2">
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
-                            <label class="form-check-label" for="inlineRadio5">Hot</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
-                            <label class="form-check-label" for="inlineRadio6">Cold</label>
-                          </div>
+                          <a href="#!" class="btn btn-primary mt-2" onclick="addToCart(5)">Add To Cart</a>
+                          
                           <div class="input-group input-group-sm ms-auto" style="width: 100px;">
-                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[5]">
                               <span class="glyphicon glyphicon-minus">-</span>
                             </button>
-                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
-                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                            <input type="text" name="quant[5]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[5]">
                               <span class="glyphicon glyphicon-plus">+</span>
                             </button>
                           </div>
                         </div>
-                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                      
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="img/chocolate.jpg" class="card-img-top" alt="...">
+                      <img id="itemImage6"src="img/chocolate.jpg" class="card-img-top img-fluid" alt="...">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                          <h5 class="card-title">Classic Chocolate</h5>
-                          <h6 class="mb-0">₱39.00</h6>
+                          <h5 id="itemName6"class="card-title">Classic Chocolate</h5>
+                          <h6 id="itemPrice6"class="mb-0">₱39.00</h6>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-2">
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
-                            <label class="form-check-label" for="inlineRadio5">Hot</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
-                            <label class="form-check-label" for="inlineRadio6">Cold</label>
-                          </div>
+                          <a href="#" class="btn btn-primary mt-2" onclick="addToCart(6)">Add To Cart</a>
                           <div class="input-group input-group-sm ms-auto" style="width: 100px;">
-                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[6]">
                               <span class="glyphicon glyphicon-minus">-</span>
                             </button>
-                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
-                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                            <input type="text" name="quant[6]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[6]">
                               <span class="glyphicon glyphicon-plus">+</span>
                             </button>
                           </div>
                         </div>
-                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                 
                       </div>
                     </div>
                   </div>
@@ -275,94 +259,73 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                   <div class="col">
                     <div class="card">
-                      <img src="img/cookies.avif" class="card-img-top w-100" alt="...">
+                      <img id="itemImage7" src="img/gallery7.jpg" class="card-img-top img-fluid" alt="...">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                          <h5 class="card-title">Cookies</h5>
-                          <h6 class="mb-0">₱29.00</h6>
+                          <h5 id="itemName7" class="card-title">Cookies</h5>
+                          <h6 id="itemPrice7"class="mb-0">₱29.00</h6>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-2">
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
-                            <label class="form-check-label" for="inlineRadio5">Hot</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
-                            <label class="form-check-label" for="inlineRadio6">Cold</label>
-                          </div>
+                          <a href="#" class="btn btn-primary mt-2" onclick="addToCart(7)">Add To Cart</a>
                           <div class="input-group input-group-sm ms-auto" style="width: 100px;">
-                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[7]">
                               <span class="glyphicon glyphicon-minus">-</span>
                             </button>
-                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
-                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                            <input type="text" name="quant[7]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[7]">
                               <span class="glyphicon glyphicon-plus">+</span>
                             </button>
                           </div>
                         </div>
-                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                     
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="img/bananabread.jpg" class="card-img-top" alt="...">
+                      <img id="itemImage8"src="img/bananabread.jpg" class="card-img-top img-fluid" alt="...">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                          <h5 class="card-title">Banana Cake</h5>
-                          <h6 class="mb-0">₱49.00</h6>
+                          <h5 id="itemName8"class="card-title">Banana Cake</h5>
+                          <h6 id="itemPrice8"class="mb-0">₱49.00</h6>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-2">
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
-                            <label class="form-check-label" for="inlineRadio5">Hot</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
-                            <label class="form-check-label" for="inlineRadio6">Cold</label>
-                          </div>
+                          <a href="#" class="btn btn-primary mt-2" onclick="addToCart(8)">Add To Cart</a>
                           <div class="input-group input-group-sm ms-auto" style="width: 100px;">
-                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[8]">
                               <span class="glyphicon glyphicon-minus">-</span>
                             </button>
-                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
-                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                            <input type="text" name="quant[8]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[8]">
                               <span class="glyphicon glyphicon-plus">+</span>
                             </button>
                           </div>
                         </div>
-                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                        
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="img/crossaint.jpg" class="card-img-top" alt="...">
+                      <img id="itemImage9"src="img/gallery8.jpg" class="card-img-top img-fluid" alt="...">
                       <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                          <h5 class="card-title">Crossaint</h5>
-                          <h6 class="mb-0">₱39.00</h6>
+                          <h5 id="itemName9"class="card-title">Brownies</h5>
+                          <h6 id="itemPrice9"class="mb-0">₱39.00</h6>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-2">
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="option1">
-                            <label class="form-check-label" for="inlineRadio5">Hot</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="option2">
-                            <label class="form-check-label" for="inlineRadio6">Cold</label>
-                          </div>
+                          <a href="#" class="btn btn-primary mt-2" onclick="addToCart(9)">Add To Cart</a>
                           <div class="input-group input-group-sm ms-auto" style="width: 100px;">
-                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+                            <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[9]">
                               <span class="glyphicon glyphicon-minus">-</span>
                             </button>
-                            <input type="text" name="quant[3]" class="form-control input-number text-center" value="1" min="1" max="10">
-                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
+                            <input type="text" name="quant[9]" class="form-control input-number text-center" value="1" min="1" max="10">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[9]">
                               <span class="glyphicon glyphicon-plus">+</span>
                             </button>
                           </div>
                         </div>
-                        <a href="#" class="btn btn-primary mt-2">Add To Cart</a>
+                   
                       </div>
                     </div>
                   </div>
@@ -375,6 +338,37 @@
 
       </header>
 
+
+ <!--FOOTER-->
+   
+ <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+ 
+  <section class="d-flex justify-content-center justify-content-lg-between p-3">
+
+  <div class="me-5 d-none d-lg-block">
+    <span>Get connected with us on social networks:</span><br>
+    <span>Copyright ©2024 All rights reserved | Photos from <a href="https://www.facebook.com/profile.php?id=61555131455662&mibextid=ZbWKwL">Sat Cafe</a></span>
+  </div>
+  <div>
+      <a href="https://www.facebook.com/profile.php?id=61555131455662&mibextid=ZbWKwL" target="_blank" class="me-4 text-reset">
+      <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="mailto:hello.satcafe@gmail.com" target="_blank" class="me-4 text-reset" >
+      <i class="fab fa-google"></i>
+      </a>
+      <a href="https://www.instagram.com/sat.cafe" target="_blank"  class="me-4 text-reset">
+      <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset" target="_blank">
+      <i class="fab fa-linkedin"></i>
+      </a>
+  </div>
+
+  </section>
+</footer>
+<!--END FOOTER-->
+
+      <script src="menu.js"></script>
       <script src="index.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
