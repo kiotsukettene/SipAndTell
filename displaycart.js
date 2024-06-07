@@ -75,3 +75,7 @@ function updateBadgeCount() {
     }
 }
 
+function clearCartItems() {
+    sessionStorage.removeItem('cartItems');
+}
+

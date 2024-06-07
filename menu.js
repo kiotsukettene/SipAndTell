@@ -60,6 +60,10 @@ function updateCartBadge() {
         cartBadge.textContent = countCartItems();
     }
 }
+function clearCartItems() {
+    sessionStorage.removeItem('cartItems');
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
@@ -67,5 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var cartItemBadge = document.getElementById('cartItemBadge');
     cartItemBadge.textContent = cartItems.length;
+    
+
 });
 

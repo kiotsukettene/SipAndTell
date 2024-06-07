@@ -5,7 +5,7 @@ body {
 }
 
 header{
-    background-color: #F0E6DD;
+    background-color: #ffedc7;
     
 }
 p {
@@ -23,6 +23,11 @@ p {
     background-color: #74512D;
     color: white;
     width: 8rem;
+    border: none;
+}
+
+.btn-primary:hover{
+  background-color: #482400;
 }
 
 .btn-buy {
@@ -73,7 +78,7 @@ p {
   }
 
   .testimonial-card {
-    background-color: #8e9296;
+    background-color: white;
     border: none;
   }
   .testimonial-card .card-body {
