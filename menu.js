@@ -30,9 +30,8 @@ function addToCart(itemId) {
   
     sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
   
-    alert("Added Successfully");
- 
-    location.reload(); 
+   
+    $('#statusSuccessModal').modal('show');
   }
 
 
@@ -72,6 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var cartItemBadge = document.getElementById('cartItemBadge');
     cartItemBadge.textContent = cartItems.length;
     
-
+    
 });
 

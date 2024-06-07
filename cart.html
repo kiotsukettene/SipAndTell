@@ -19,7 +19,9 @@
             <section id="nav">
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                  <a class="navbar-brand " href="#">Logo</a>
+                  <a class="navbar-brand " href="#">
+                    <img class="img-fluid mb-2" src="img/logo.png" alt="" width="90px">
+                  </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -140,7 +142,7 @@
                                                   <div class="p-5">
                                                     <div class="d-flex justify-content-between align-items-center mb-4">
                                                       <h1 class="fw-bold mb-0 text-black ">Your Cart</h1>
-                                                      <h6 id="cartItemCount" class="mb-0 text-muted">0 items</h6>
+                                                      <h6 class="mb-0 text-muted">Order ID: <span id="orderId"></span></h6>
                                                     </div>
                                                   
                                                     <!-- Cart items will be displayed here -->
@@ -159,7 +161,7 @@
                                                     <hr class="my-4">
                                   
                                                     <div class="d-flex justify-content-between mb-4">
-                                                      <h5 id="totalItemCount" class="">0 items</h5>
+                                                      <h5 id="cartItemCount" class="">0 items</h5>
                                                       <h5 id="sellingPrice">₱139.00</h5>
                                                     </div>
                                   

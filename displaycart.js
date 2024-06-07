@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
     var cartContainer = document.querySelector('.cart-items');
     
+    console.log('Cart Items:', cartItems);
+
     cartItems.forEach(function (item, index) {
         var itemHtml = `
             <div class="row mb-4 d-flex justify-content-between align-items-center">
-              <hr my="2">
+                <hr my="2">
                 <div class="col-md-2 col-lg-2 col-xl-2">
                     <img src="${item.image}" class="img-fluid rounded-3" alt="..." style="width: 100%; height: 50px; object-fit: cover;">
                 </div>
@@ -22,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                     <button class="btn btn-remove" onclick="removeItem(${index})"><i class="fas fa-times"></i></button>
                 </div>
-                
             </div>
         `;
         cartContainer.insertAdjacentHTML('beforeend', itemHtml);
@@ -33,33 +34,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var cartItemBadge = document.getElementById('cartItemBadge');
     cartItemBadge.textContent = cartItems.length;
-    
-
-    var totalItemCountElement = document.getElementById('totalItemCount');
-    totalItemCountElement.textContent = cartItems.length + (cartItems.length === 1 ? ' item' : ' items');
 
     var totalPrice = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
 
-   
     var totalPriceElement = document.getElementById('totalPrice');
     totalPriceElement.textContent = '₱' + totalPrice.toFixed(2);
 
-    var totalPrice = cartItems.reduce(function(total, item) {
-        return total + (item.price * item.quantity);
-    }, 0);
-
-  
     var sellingPriceElement = document.getElementById('sellingPrice');
     sellingPriceElement.textContent = '₱' + totalPrice.toFixed(2);
+
+  
+    var orderIdElement = document.getElementById('orderId');
+    var orderId = sessionStorage.getItem('orderId');
+    if (!orderId) {
+        orderId = generateOrderId();
+        sessionStorage.setItem('orderId', orderId);
+    }
+    orderIdElement.textContent = orderId;
+
+    console.log('Order ID:', orderId);
+
+    document.getElementById('okayBtn').addEventListener('click', function() {
+        var newOrderId = generateOrderId();
+        sessionStorage.setItem('orderId', newOrderId);
+        console.log('New Order ID:', newOrderId);
+    });
 });
 
 function getCategory(itemName) {
     return itemName.split(' ')[0];
 }
 
-
 function removeItem(index) {
-
     var cartItems = JSON.parse(sessionStorage.getItem('cartItems')) || [];
     cartItems.splice(index, 1);
     sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -67,8 +73,7 @@ function removeItem(index) {
 }
 
 function updateBadgeCount() {
-    // Logic to retrieve count of items in cart and update badge element
-    var cartItemCount = getCartItemCount(); // Example function to retrieve count of items in cart
+    var cartItemCount = getCartItemCount();
     var badgeElement = document.getElementById('cartItemCount');
     if (badgeElement) {
         badgeElement.textContent = cartItemCount.toString();
@@ -77,5 +82,15 @@ function updateBadgeCount() {
 
 function clearCartItems() {
     sessionStorage.removeItem('cartItems');
+    sessionStorage.removeItem('orderId'); 
 }
 
+function generateOrderId() {
+    var orderIdLength = 5;
+    var orderId = '';
+    for (var i = 0; i < orderIdLength; i++) {
+        var randomDigit = Math.floor(Math.random() * 10);
+        orderId += randomDigit;
+    }
+    return orderId;
+}
