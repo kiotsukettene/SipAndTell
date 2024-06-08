@@ -105,6 +105,11 @@ p {
     height: 100px; /* Adjust the height as needed */
   }
 
+  @media (max-width: 575.98px) {
+    .text-lg-left {
+        text-align: center !important;
+    }
+}
   @media (max-width: 766px) {
     .col-md-2,
     .col-lg-2,
