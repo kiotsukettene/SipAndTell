@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="text-end">${item.quantity}</div> 
                 </div>
                 <div class="col-sm-3 col-lg-2 col-xl-2">
-                    <h6 class="mb-0 text-end">₱${(item.price * item.quantity).toFixed(2)}</h6>
+                    <h6 class="mb-0 me-2 text-end">₱${(item.price * item.quantity).toFixed(2)}</h6>
                 </div>
                 <div class="col-sm-2 col-md-1 col-lg-1 col-xl-1 text-end ">
                     <button class="btn btn-remove" onclick="removeItem(${index})"><i class="fas fa-times"></i></button>
